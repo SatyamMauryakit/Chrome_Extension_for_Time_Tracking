@@ -1,0 +1,108 @@
+/* Popup base styles */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #e4ebf5);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 320px;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Time list */
+#timeList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  background: #f9fbfd;
+}
+
+/* List items */
+#timeList li {
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6ecf1;
+  font-size: 0.9rem;
+}
+
+#timeList li:last-child {
+  border-bottom: none;
+}
+
+#timeList li:nth-child(even) {
+  background: #f3f6fa;
+}
+
+/* Scrollbar styling */
+#timeList::-webkit-scrollbar {
+  width: 6px;
+}
+#timeList::-webkit-scrollbar-thumb {
+  background: #c0c6cc;
+  border-radius: 4px;
+}
+#timeList::-webkit-scrollbar-thumb:hover {
+  background: #9da5ad;
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.controls button {
+  flex: 1;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Refresh button */
+#refresh {
+  background: #4a90e2;
+  color: white;
+}
+#refresh:hover {
+  background: #357abd;
+  transform: translateY(-1px);
+}
+
+/* View Analytics button */
+#viewAnalytics {
+  background: #2ecc71;
+  color: white;
+}
+#viewAnalytics:hover {
+  background: #27ae60;
+  transform: translateY(-1px);
+}
+
+/* Active click effect */
+.controls button:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,152 @@
+/* Base styles */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f6f8, #e9eff5);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.wrap {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 95%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+input#userId {
+  padding: 0.6rem 1rem;
+  border: 2px solid #dce3ea;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  min-width: 220px;
+}
+
+input#userId:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+  outline: none;
+}
+
+button#load {
+  padding: 0.6rem 1.4rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button#load:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+}
+
+button#load:active {
+  transform: translateY(0);
+}
+
+/* Chart styling */
+canvas#chart {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 450px;
+  animation: slideUp 0.8s ease-in-out;
+}
+
+/* Raw data styling */
+#raw {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f7f9fc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e0e6ed;
+}
+
+/* Scrollbar styling for raw data */
+#raw::-webkit-scrollbar {
+  width: 6px;
+}
+
+#raw::-webkit-scrollbar-thumb {
+  background: #c0c6cc;
+  border-radius: 4px;
+}
+
+#raw::-webkit-scrollbar-thumb:hover {
+  background: #9da5ad;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .wrap {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input#userId,
+  button#load {
+    width: 100%;
+  }
+}
